@@ -10,8 +10,8 @@
     "time",
     "datetime"
   ],
-  "main": "pikaday.js",
-  "scripts": ["pikaday.js"],
+  "main": "js/pikaday.js",
+  "scripts": ["js/pikaday.js"],
   "styles":  ["css/pikaday.css"],
   "dependencies": {},
   "demo": "http://dbushell.github.io/Pikaday/",

@@ -1,5 +1,5 @@
 {
-  "name": "pikaday-time",
+  "name": "@polleverywhere/pikaday",
   "description": "Time support added to pikaday",
   "keywords": [
     "datepicker",
@@ -9,7 +9,7 @@
     "datetime"
   ],
   "main": [
-    "./pikaday.js",
+    "./js/pikaday.js",
     "./css/pikaday.css"
   ],
   "dependencies": {},
@@ -27,9 +27,9 @@
     "0BSD",
     "MIT"
   ],
-  "homepage": "https://github.com/owenmead/Pikaday",
+  "homepage": "https://github.com/polleverywhere/Pikaday",
   "repository": {
     "type": "git",
-    "url": "https://github.com/owenmead/Pikaday.git"
+    "url": "https://github.com/polleverywhere/Pikaday.git"
   }
 }

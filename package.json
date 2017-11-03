@@ -1,6 +1,6 @@
 {
   "name": "@polleverywhere/pikaday",
-  "version": "1.6.1",
+  "version": "1.7.1",
   "description": "Time support added to pikaday with PE mods",
   "keywords": [
     "datepicker",
@@ -40,6 +40,6 @@
   },
   "scripts": {
     "test": "testling",
-    "lint": "jshint *.js plugins/*.js tests/*.js"
+    "lint": "jshint js/*.js plugins/*.js tests/*.js"
   }
 }

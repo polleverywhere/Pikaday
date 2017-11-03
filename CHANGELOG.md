@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.7.1
+
+- Remove global keyboard listener in favour of local to element listener
+- Handle tabs better
+- Maintain focus when using keyboard to change date
+
 ## 1.7.0 - TBA
 
 - Add keyboard input option, see #610
