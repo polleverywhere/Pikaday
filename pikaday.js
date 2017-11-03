@@ -287,6 +287,9 @@
         // Blur field when date is selected
         blurFieldOnSelect : true,
 
+        // Focus the date (button) when selected - useful for keyboard nav
+        focusDateOnSelect: false,
+
         // internationalization
         i18n: {
             previousMonth : 'Previous Month',
@@ -628,6 +631,15 @@
                     case 40:
                         self.adjustDate('add', 7);
                         break;
+                    case 9:
+                        if(opts.showTime && !e.shiftKey && document.activeElement.className.indexOf("pika-day") !== -1) {
+                            var hourSelector = self.el.querySelector(".pika-select-hour")
+                            if(hourSelector) {
+                                e.preventDefault();
+                                hourSelector.focus()
+                            }
+                        }
+                        break;
                 }
             }
         };
@@ -721,7 +733,7 @@
         addEvent(self.el, 'change', self._onChange);
 
         if (opts.keyboardInput) {
-            addEvent(document, 'keydown', self._onKeyChange);
+            addEvent(self.el, 'keydown', self._onKeyChange);
         }
 
         if (opts.field) {
@@ -959,6 +971,11 @@
             }
             if (!preventOnSelect && typeof this._o.onSelect === 'function') {
                 this._o.onSelect.call(this, this.getDate());
+            }
+
+            if(this._o.focusDateOnSelect) {
+                var selected = this.el.querySelector("td.is-selected > button")
+                if(selected) selected.focus()
             }
         },
 
@@ -1381,7 +1398,7 @@
             removeEvent(this.el, 'touchend', this._onMouseDown, true);
             removeEvent(this.el, 'change', this._onChange);
             if (opts.keyboardInput) {
-                removeEvent(document, 'keydown', this._onKeyChange);
+                removeEvent(this.el, 'keydown', this._onKeyChange);
             }
             if (opts.field) {
                 removeEvent(opts.field, 'change', this._onInputChange);
