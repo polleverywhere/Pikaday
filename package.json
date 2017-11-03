@@ -1,7 +1,7 @@
 {
-  "name": "pikaday-time",
+  "name": "@polleverywhere/pikaday",
   "version": "1.6.1",
-  "description": "Time support added to pikaday",
+  "description": "Time support added to pikaday with PE mods",
   "keywords": [
     "datepicker",
     "calendar",
@@ -10,12 +10,12 @@
     "datetime"
   ],
   "homepage": "http://dbushell.github.io/Pikaday/",
-  "bugs": "https://github.com/owenmead/Pikaday/issues",
+  "bugs": "https://github.com/polleverywhere/Pikaday/issues",
   "license": "(0BSD OR MIT)",
   "main": "pikaday.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/owenmead/Pikaday.git"
+    "url": "https://github.com/polleverywhere/Pikaday.git"
   },
   "optionalDependencies": {
     "moment": "2.x"
